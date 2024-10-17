@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Collection</title>
+</head>
+<body>
+<h1>All Movies</h1>
+<ul>
+    <li th:each="movie : ${movies}">
+        <h2 th:text="${movie.title}"></h2>
+        <p><strong>Director:</strong><span th:text="${movie.director}"></span></p>
+        <p><strong>Gen:</strong><span th:text="${movie.gen}"></span></p>
+        <p><strong>Release year:</strong><span th:text="${movie.releaseYear}"></span></p>
+        <p><strong>Description:</strong><span th:text="${movie.description}"></span></p>
+    </li>
+</ul>
+</body>
+</html>
